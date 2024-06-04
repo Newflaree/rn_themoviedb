@@ -13,16 +13,18 @@ import * as UseCases from '../../core/use-cases';
 
 export const useMovies = () => {
   const [ isLoading, setIsLoading ] = useState( true );
-  const [ nowPaying, setnowPaying ] = useState<Movie[]>([]);
+  const [ nowPlaying, setNowPlaying ] = useState<Movie[]>([]);
 
   useEffect( () => {
     initialLoad();
   }, [] );
 
   const initialLoad = async () => {
-    const nowPayingMovies = await UseCases.moviesNowPlayingUseCase( movieDBFetcher )
+    const nowPlayingMovies = await UseCases.moviesNowPlayingUseCase( movieDBFetcher )
   }
 
-
-  return {}
+  return {
+    isLoading,
+    nowPlaying
+  }
 }
