@@ -10,4 +10,4 @@
 
 ### iOS
 5. Instalar las dependencias de iOS con `npx pod-install`
-5. Ejecutar el proyecto en iOS con ``yarn ios
+5. Ejecutar el proyecto en iOS con `yarn ios`
