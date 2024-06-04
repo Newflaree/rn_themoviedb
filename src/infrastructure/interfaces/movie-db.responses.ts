@@ -6,6 +6,13 @@ export interface NowPlayingResponse {
     total_results: number;
 }
 
+export interface TMDBResponse {
+    page:          number;
+    results:       Result[];
+    total_pages:   number;
+    total_results: number;
+}
+
 export interface Dates {
     maximum: Date;
     minimum: Date;
@@ -26,9 +33,4 @@ export interface Result {
     video:             boolean;
     vote_average:      number;
     vote_count:        number;
-}
-
-export enum OriginalLanguage {
-    En = "en",
-    Fr = "fr",
 }
